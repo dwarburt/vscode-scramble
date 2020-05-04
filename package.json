@@ -10,14 +10,14 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:scramble.helloWorld"
+		"onCommand:scramble.scramble"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "scramble.helloWorld",
-				"title": "Hello World"
+				"command": "scramble.scramble",
+				"title": "Scramble text"
 			}
 		]
 	},
