@@ -2,7 +2,8 @@
 	"name": "scramble",
 	"displayName": "scramble",
 	"description": "scramble highlighted text while maintaining structure",
-	"version": "0.0.1",
+	"publisher": "rubbersoft",
+	"version": "1.0.0",
 	"engines": {
 		"vscode": "^1.44.0"
 	},
