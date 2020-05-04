@@ -3,6 +3,14 @@
 	"displayName": "scramble",
 	"description": "scramble highlighted text while maintaining structure",
 	"publisher": "rubbersoft",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/dwarburt/vscode-scramble"
+	},
+	"type": "Formatters",
+	"keywords": ["anonymous", "anonymize", "scramble", "random", "randomize"],
+	"icon": "images/iconxcf.png",
+	"license": "MIT",
 	"version": "1.0.0",
 	"engines": {
 		"vscode": "^1.44.0"
