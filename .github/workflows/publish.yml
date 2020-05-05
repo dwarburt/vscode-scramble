@@ -24,7 +24,7 @@ jobs:
 
     # Runs a set of commands using the runners shell
     - name: publish
-      uses: ./github/actions/vsce
+      uses: ./.github/actions/vsce
       env:
         PUBLISH_SECRET: ${{ secrets.VSCODE_API_KEY }}
         
