@@ -24,12 +24,7 @@ jobs:
 
     # Runs a set of commands using the runners shell
     - name: publish
-      uses: docker://nodejs
+      uses: ./github/actions/vsce
       env:
         PUBLISH_SECRET: ${{ secrets.VSCODE_API_KEY }}
-      run: |
-        set -e
-        npm test
-        npm install -g vsce
-        vsce publish -p "${PUBLISH_SECRET}"        
         
