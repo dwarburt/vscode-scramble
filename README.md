@@ -6,7 +6,7 @@ This extension does a very simple replace to scramble selected text while mainta
 
 Provides one command, `scramble` which will replace each uppercase letter, lowercase letter, and digit in the current selection(s) with a random character from the same class.
 
-\!\[scramble\]\(images/scramble-demo.gif\)
+![scramble](images/scramble-demo.png)
 
 ## Release Notes
 
