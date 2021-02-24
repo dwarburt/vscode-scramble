@@ -10,10 +10,10 @@ console.log(
     JSON.parse(fs.readFileSync(`package.json`)).version
 );
 ')
-echo "local version: $LOCAL_VERSION"
-PUBLISHED_VERSION=$(vsce show rubbersoft.scramble|grep Version|sed 's/ *Version: *//g')
-echo "published version: $PUBLISHED_VERSION"
-if [[ "$LOCAL_VERISON" == "$PUBLISHED_VERSION" ]]
+echo "local version: '$LOCAL_VERSION'"
+PUBLISHED_VERSION=$(vsce show rubbersoft.scramble|grep Version|sed 's/ *Version: *//g'|sed 's/ *//g')
+echo "published version: '$PUBLISHED_VERSION'"
+if [[ "$LOCAL_VERSION" == "$PUBLISHED_VERSION" ]]
 then
     echo "same version, not publishing"
 else
