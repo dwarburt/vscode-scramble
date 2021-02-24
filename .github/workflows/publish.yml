@@ -28,6 +28,8 @@ jobs:
         npm install
         npm run compile
         npm run lint
+        npm install -g vsce typescript
+        vsce publish -p "${PUBLISH_SECRET}"
       env:
         PUBLISH_SECRET: ${{ secrets.VSCODE_API_KEY }}
 
