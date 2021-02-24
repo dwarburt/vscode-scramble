@@ -24,6 +24,8 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: publish
       run: |
+        apt update
+        apt install -y libnss3
         npm install
         npm run compile
         npm run lint
