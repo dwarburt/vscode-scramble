@@ -28,7 +28,7 @@ jobs:
         npm install
         npm run compile
         npm run lint
-        npm install -g vsce typescript
+        npm install -g @vscode/vsce typescript
         bash tools/conditional-publish.bash
       env:
         PUBLISH_SECRET: ${{ secrets.VSCODE_API_KEY }}
