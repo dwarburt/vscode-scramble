@@ -1,5 +1,0 @@
-name: vsce
-description: run vsce
-runs:
-  using: docker
-  image: Dockerfile 
