@@ -18,9 +18,9 @@ function randomChar(first: string, maxDistance: number): string {
 }
 function scramble(input: string): string {
   return input
-    .replace(/[A-Z]/g, _ => {return randomUpper();})
-    .replace(/[a-z]/g, _ => {return randomLower();})
-    .replace(/[0-9]/g, _ => {return randomDigit();})
+    .replace(/[A-Z]/g, () => randomUpper())
+    .replace(/[a-z]/g, () => randomLower())
+    .replace(/[0-9]/g, () => randomDigit())
   ;
 }
 // this method is called when your extension is activated
@@ -34,7 +34,7 @@ export function activate(context: vscode.ExtensionContext) {
   // The command has been defined in the package.json file
   // Now provide the implementation of the command with registerCommand
   // The commandId parameter must match the command field in package.json
-  let disposable = vscode.commands.registerCommand('scramble.scramble', () => {
+  const disposable = vscode.commands.registerCommand('scramble.scramble', () => {
     // The code you place here will be executed every time your command is executed
 
     // Display a message box to the user
@@ -44,7 +44,7 @@ export function activate(context: vscode.ExtensionContext) {
     }
     editor.edit(eb => {
       editor.selections.forEach( selection => {
-        let text = editor.document.getText(selection);
+        const text = editor.document.getText(selection);
         eb.delete(selection);
         eb.insert(selection.start, scramble(text));
       });
